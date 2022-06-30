@@ -1,0 +1,43 @@
+﻿@model List<Content>
+ 
+
+<div class="container">
+
+    <div class="row">
+
+           <a class="btn btn-success" asp-controller="Content", asp-action="index" asp-area="Create">Create</a>
+    <table class="table">
+      <thead>
+       <tr>
+         <th scope="col">Id</th>
+         <th scope="col">Title</th>
+         <th scope="col">SubTitle</th>
+         <th scope="col">ImageUrl</th>
+       </tr>
+      </thead>
+    
+  
+       @foreach (var item in Model)
+   {
+    <tbody>
+     <tr>
+       <th>@item.Id</th>
+       <td>@item.Title</td>
+       <td>@item.SubTitle</td>
+       <td>@item.ImageUrl</td>
+     </tr>
+ 
+   </tbody>
+   }
+  </table>
+
+           <a class="btn btn-success" asp-controller="Content", asp-action="index" asp-area="Create">Create</a>
+           <a class="btn btn-success" asp-controller="Content", asp-action="index" asp-area="Create">Create</a>
+          <form>
+              <buttton class="btn btn-danger">Delete</buttton>
+          </form>
+
+    </div>
+
+</div>
+
